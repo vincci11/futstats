@@ -1,0 +1,896 @@
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.intro-box {
+    background-color: #f0f8ff; /* Cor de fundo clara */
+    border: 2px solid #004965; /* Borda sólida */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 700px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Texto centralizado */
+}
+
+.intro-box p {
+    font-size: 0.8rem; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+.veja{
+    text-decoration: none;
+    color: #004965;
+}
+
+.veja:hover{
+    color: #C1151B;
+}
+
+.textexternallinks {
+    color: #004965;
+    text-align: center;
+    margin-top: 0;
+}
+
+.external-links {
+    background-color: #f7e8e9; /* Cor de fundo clara */
+    border: 2px solid #C1151B; /* Borda sólida */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 700px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Texto centralizado */
+    margin-top: 20px;
+}
+
+.external-link-button {
+    background-color: #004965;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.external-link-button:hover {
+    background-color: #C1151B;
+}
+
+td{
+    color: #004965;
+}
+
+header {
+    background-color: #004965;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.imagem-topo img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 80px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item{
+    margin: 0 15px;
+}
+
+.especial {
+    background-color: #f7e8e9; /* Cor de fundo clara */
+    border: 2px solid #C1151B; /* Borda sólida */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 700px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Texto centralizado */
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #004965;
+    font-weight: 400;
+}
+
+.especial:hover {
+    background-color: #004965;
+    color: #fff;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: #f78387;
+    font-weight: bold;
+}
+
+.nav-item.active a {
+    color: #f78387; /* Cor do texto quando ativo */
+    font-weight: bold; /* Faz o texto mais espesso */
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+    .imagem-topo img {
+        max-width: 150px; /* Aumente um pouco o tamanho da imagem */
+        height: auto;
+        margin-right: 20px; /* Reduza a margem direita para afastar da borda esquerda */
+        margin-left: 0;
+    }
+
+    .nav-bar{
+        padding: 1.5rem 2rem; /* Reduza o preenchimento do cabeçalho */
+    }
+
+    .nav-item{
+        display: none;
+        margin-right: 60px; /* Reduza a margem direita dos itens de menu */
+    }
+
+    .mobile-menu-icon{
+        display: block;
+        font-size: 25px; /* Diminua o tamanho do ícone do menu */
+        padding: 5px;
+        margin-right: -30px;
+    }
+
+    .mobile-menu-icon img{
+        width: 65%; /* Aumente um pouco o tamanho da imagem no ícone do menu */
+        height: auto;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open{
+        display: block;
+    }
+}
+
+
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+
+@media (min-width: 200px) {
+    .container {
+        max-width: 700px; /* Define uma largura máxima para telas maiores */
+    }
+}
+
+.imagem-fundo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.titulo {
+    color: #C1151B;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #004965;
+    text-align: left;
+}
+
+.separador-formulario {
+    border: 1px solid #004965;
+    margin: 20px 0;
+}
+
+#totalJogos{
+    width: 162px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #004965;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 155px;
+}
+
+#totalJogosMandantes, #totalJogosVisitantes{
+    width: 162px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #004965;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 100px;
+}
+
+#jogosAmbasMarcam, #jogosOver15, #jogosOver25{
+    width: 150px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #004965;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 155px;
+}
+
+#jogosMandanteSofreu, #jogosVisitanteMarcou {
+    width: 150px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #004965;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 100px;
+}
+
+input[type="number"]::placeholder{
+    font-size: 10px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    table {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px; /* Espaçamento vertical entre os elementos */
+    }
+
+    .textitens{
+        font-size: 14px;
+        text-align: center; /* Centralize o texto */
+        margin-bottom: 5px;
+        margin-left: 30px;
+    }
+    
+    
+
+    .input {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        font-size: 14px;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    #totalJogos{
+        margin-left: 50px;   
+    }
+    
+    #jogosAmbasMarcam, #jogosOver15, #jogosOver25{
+        margin-left: 50px;
+    }
+}
+
+
+
+.InfAd{
+    color: #004965;
+}
+
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #C1151B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type="button"]:hover {
+    background-color: #00334d;
+}
+
+#resultadoHistorico, #resultadoDesempenho {
+    background-color: #eef;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.destaque{
+    color: #C1151B;
+    font-weight: bold;
+    text-align: center;
+}
+
+.classeBola {
+    width: 15px; 
+    height: 15px; 
+    vertical-align: middle; 
+    margin-left: 5px; 
+}
+
+.resultado-alto {
+    background-color: green; 
+    color: white; 
+    width: 90%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-family: Montserrat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultado-baixo {
+    background-color: #C1151B; 
+    color: white; 
+    width: 90%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-family: Montserrat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultado-atencao {
+    background-color: #fccb58; 
+    color: black; 
+    width: 90%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-family: Montserrat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultadoFinal {
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#botaoLimpar {
+    width: 60%;
+    padding: 10px;
+    background-color: #004965;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#botaoLimpar:hover {
+    background-color: #C1151B;
+}
+
+
+/* Início estilo formulário de Feedback */
+/* Estilo do formulário de feedback */
+/* #feedbackForm {
+    border: 2px solid #004965;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Estilos para labels e inputs */
+/* #feedbackForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/* 
+#feedbackForm input[type="text"], 
+#feedbackForm input[type="email"], 
+#feedbackForm textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+/* 
+label[for="nome"], label[for="email"], label[for="campoFeedback"]{
+    color: #004965;
+}
+
+/* Estilo para o botão de enviar */
+/* #feedbackForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #004965;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* 
+#feedbackForm button[type="submit"]:hover {
+    background-color: #00334d;
+}
+
+/* Estilo para a seção de comentários */
+/* #comentariosFeedback {
+    margin-top: 20px;
+}
+/* 
+#comentariosFeedback p {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* 
+#comentariosFeedback p strong {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+/* 
+#comentariosFeedback p em {
+    font-style: italic;
+    color: #777;
+}
+/* 
+@media screen and (max-width: 500px){
+/* Início estilo formulário de Feedback */
+/* Estilo do formulário de feedback */
+/* #feedbackForm {
+    border: 2px solid #004965;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Estilos para labels e inputs */
+/* #feedbackForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/* 
+#feedbackForm input[type="text"], 
+#feedbackForm input[type="email"], 
+#feedbackForm textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+/* 
+label[for="nome"], label[for="email"], label[for="campoFeedback"]{
+    color: #004965;
+}
+
+/* Estilo para o botão de enviar */
+/* #feedbackForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #004965;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* 
+#feedbackForm button[type="submit"]:hover {
+    background-color: #00334d;
+}
+
+/* Estilo para a seção de comentários */
+/* #comentariosFeedback {
+    margin-top: 20px;
+}
+
+/* 
+#comentariosFeedback p {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 
+#comentariosFeedback p strong {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 
+#comentariosFeedback p em {
+    font-style: italic;
+    color: #777;
+}
+}*/
+
+
+/* Estilos específicos para dispositivos menores */
+@media (max-width: 500px) {
+    #feedbackForm {
+        width: 95%;
+    }
+}
+/* Final estilo formulário de Feedback */
+
+footer {
+    background-color: rgb(240, 236, 236);
+    color: #004965;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left {
+    justify-content: flex-start;
+}
+
+.footer-left p {
+    margin-right: 10px; /* Ajuste o valor conforme necessário para o espaço desejado */
+}
+
+.footer-right {
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.footer-text {
+    margin-right: 10px; 
+    text-align: center;
+}
+
+.footer-text p {
+    margin-right: 10px; 
+}
+
+.footer-logo {
+    width: 100px; 
+    display: inline-block;
+}
+
+.footer-logo img {
+    width: 100px; 
+}
+
+.highlight {
+    color: #C1151B; 
+    font-weight: bold; 
+}
+
+.footer-right p {
+    margin-right: 10px; /* Ajuste o valor conforme necessário para o espaço desejado */
+}
+
+.instagram-link {
+    display: inline-flex; /* Usa flexbox para alinhamento inline */
+    align-items: center; /* Centraliza verticalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #C1151B;
+}
+
+.instagram-icon {
+    margin-right: 5px; /* Adiciona um espaço entre a imagem e o texto */
+    width: 20px;
+    height: auto;
+}
+
+.instagram-link:hover {
+    text-decoration: none; 
+    color: #004965;
+}
+
+@media screen and (max-width: 500px){
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-right: 0;
+    }
+    
+    .footer-left, .footer-right {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px; /* Espaço adicional entre os itens do rodapé */
+    }
+
+    .footer-left p, .footer-right p {
+        margin-bottom: 10px; /* Espaço entre o texto e a imagem abaixo */
+    }
+
+    .footer-left img, .footer-right img {
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    .instagram-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instagram-icon {
+        margin-bottom: 5px; /* Espaço entre a imagem do Instagram e o texto */
+    }
+}
+
+/* Página Melhores Times BTTS */
+.intro-box-lista {
+    background-color: #f0f8ff; /* Cor de fundo clara */
+    border: 2px solid #004965; /* Borda sólida */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 700px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Texto centralizado */
+}
+
+.intro-box-lista p {
+    font-size: 0.8rem; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+.table-container {
+    overflow-x: auto; /* Permite a rolagem horizontal se necessário */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 100%; /* Largura máxima */
+}
+
+.tabela-dados {
+    width: 100%; /* Ocupa a largura total do container */
+    border-collapse: collapse; /* Para remover espaços entre as bordas */
+    min-width: 600px; /* Largura mínima para manter a legibilidade */
+    text-align: center; /* Alinha o texto à esquerda */
+}
+
+.tabela-dados th, .tabela-dados td {
+    border: 1px solid #004965; /* Bordas para células da tabela */
+    padding: 8px; /* Espaço interno nas células */
+}
+
+.tabela-dados th {
+    background-color: #004965; /* Cor de fundo para cabeçalho da tabela */
+    color: white; /* Cor do texto para cabeçalho da tabela */
+}
+
+.tabela-dados tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Cor de fundo para linhas ímpares */
+}
+
+.tabela-dados tr:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}
+
+.time {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+    .intro-box-lista {
+    background-color: #f0f8ff; /* Cor de fundo clara */
+    border: 2px solid #004965; /* Borda sólida */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 700px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Texto centralizado */
+}
+
+.intro-box-lista p {
+    font-size: 0.8rem; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+    .table-container {
+        border: 0;
+        width: 100%; /* Largura total do contêiner */
+        margin: auto; /* Centraliza o contêiner */
+        overflow-x: auto; /* Permite rolagem horizontal se o conteúdo for muito grande */
+    }
+
+    .tabela-dados {
+        width: 100%; /* A tabela ocupa 100% da largura do contêiner */
+        max-width: 700px; /* Define a largura máxima para a tabela */        
+        border: 0; /* Remove a borda da tabela */
+        margin: auto; /* Centraliza a tabela */
+    }
+
+    .tabela-dados thead {
+        display: none; /* Esconde o cabeçalho em telas pequenas */
+    }
+
+    .tabela-dados tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #004965;
+        margin-left: auto; /* Centraliza as linhas da tabela */
+        margin-right: auto; /* Centraliza as linhas da tabela */
+    }
+
+    .tabela-dados td {
+        display: block; /* Faz cada célula se comportar como uma div */
+        text-align: center; /* Texto centralizado */
+        font-size: 13px; /* Reduz o tamanho da fonte para se ajustar a telas menores */
+        border-bottom: 1px dotted #004965;
+        position: relative;
+        padding-left: 50%; /* Espaço à esquerda para exibir o rótulo da linha */
+    }
+
+    .tabela-dados td:before {
+        content: attr(data-label); /* Usa o atributo data-label para criar rótulos */
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+.time {
+    font-weight: bold;
+}
+}
+
+
+
+/* Página Como Calcular */
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporção 16:9 */
+    width: 90%; /* Largura do vídeo como percentual da largura do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    border: 2px solid #000; /* Adiciona uma borda ao contêiner */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+.intro-box-manual {
+    background-color: #f0f8ff; /* Cor de fundo clara */
+    border: 2px solid #004965; /* Borda sólida */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    max-width: 700px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Texto centralizado */
+}
+
+
+.intro-box-manual p {
+    font-size: 0.8rem; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+.imagem-referencia {
+    max-width: 100%; /* Certifique-se de que a imagem não exceda a largura do contêiner */
+    height: auto; /* Mantenha a proporção da imagem */
+    display: block; /* Exibe a imagem como um bloco */
+    margin: 10px 0; /* Adiciona margem acima e abaixo da imagem */
+    border: 2px solid #004965;
+    border-radius: 10px;
+}
+
+.bullet-image {
+    width: 20px; /* ou outra medida conforme a necessidade */
+    height: auto; /* mantém a proporção da imagem */
+    margin-right: 5px; /* espaço entre a imagem e o texto */
+    vertical-align: middle; /* alinha a imagem verticalmente com o texto */
+}
+
+
+@media (max-width: 500px) {
+    .header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+

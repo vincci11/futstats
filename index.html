@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+    <title>Calculadora BTTS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="imagem-topo">
+                <a href="https://www.instagram.com/fuhtstats/" target="_blank">
+                    <img src="logo_white1.png" alt="Logo da Calculadora BTTS">
+                </a>    
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <!--<li class="nav-item"><a href="" class="nav-link">Home</a></li>-->
+                    <!--<li class="nav-item"><a href="" class="nav-link">Sobre</a></li>-->
+                    <li class="nav-item active"><a href="" class="nav-link">Calculadora BTTS</a></li>
+                    <li class="nav-item"><a href="como_calcular.html" class="nav-link">Como calcular</a></li>
+                    <li class="nav-item"><a href="melhores_times_btts.php" class="nav-link">Melhores times BTTS</a></li>
+                    <li class="nav-item"><a href="https://lastlink.com/p/C558B7AA2/" target="_blank" class="especial">Grupo Telegram</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/menu.png"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <!--<li class="nav-item"><a href="" class="nav-link">Home</a></li>-->
+                <!--<li class="nav-item"><a href="" class="nav-link">Sobre</a></li>-->
+                <li class="nav-item active"><a href="" class="nav-link">Calculadora BTTS</a></li>
+                <li class="nav-item"><a href="como_calcular.html" class="nav-link">Como calcular</a></li>
+                <li class="nav-item"><a href="melhores_times_btts.php" class="nav-link">Melhores times BTTS</a></li>
+                <li class="nav-item"><a href="https://lastlink.com/p/C558B7AA2/" target="_blank" class="especial">Grupo Telegram</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h1 class="titulo">Calculadora BTTS</h1>
+        
+        
+        <div class="intro-box">
+            <p>"BTTS, ou 'Both Teams to Score', é uma aposta esportiva que envolve a previsão de gols marcados por ambas as equipes em uma partida de futebol. 
+            Nossa calculadora é baseada em um método exclusivo que criamos e validamos para o mercado de Ambas Marcam, atingindo um impressionante <strong>percentual de mais de 70% de acertos</strong>. 
+            Experimente essa ferramenta maravilhosa para identificar excelentes oportunidades de investimento no mercado BTTS em uma partida!</p>
+            <p><a href="como_calcular.html" class="veja"><strong>Veja como calcular</strong></a></p>
+        </div>
+
+        
+        <div class="external-links">
+            <p>
+            <h4 class="textexternallinks">Use esses sites para ver os jogos dos times analisados:</h4>
+            <a href="https://www.futebol.com" target="_blank" class="external-link-button">Futebol.com</a>
+            <a href="https://www.flashscore.com.br" target="_blank" class="external-link-button">Flashscore</a>
+            </p>
+        </div>
+        <br>
+        
+        <section id="historicoPlacares">
+            <h3 class="subtitulo">Histórico Placares</h3>
+            <form id="calcForm">
+                <table>
+                    <tr>
+                        <td><label for="totalJogos">Total de jogos <strong>Conferidos</strong>:</label>
+                        <td class="input"><select id="totalJogos" name="totalJogos" autocomplete="off">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select></td></td>
+                    </tr>
+                    <tr>
+                        <td>Jogos que tiveram placar <strong>Ambas Marcam</strong>:</td>
+                        <td class="input"><input type="number" id="jogosAmbasMarcam" name="jogosAmbasMarcam" min="0" max="20" step="1" placeholder="Selecione o valor" autocomplete="off"></td>
+                    </tr>
+    
+                    <tr>
+                        <td>Jogos que tiveram placar <strong>Over 1.5 gol</strong>:</td>
+                        <td class="input"><input type="number" id="jogosOver15" name="jogosOver15" min="0" max="20" step="1" placeholder="Selecione o valor" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Jogos que tiveram placar <strong>Over 2.5 gol</strong>:</td>
+                        <td class="input"><input type="number" id="jogosOver25" name="jogosOver25" min="0" max="20" step="1" placeholder="Selecione o valor" autocomplete="off"></td>
+                    </tr>
+    
+                    <tr>
+                        <td></td>    
+                    </tr>
+                </table>
+            </form> 
+    
+            <input type="button" value="Calcular Histórico" onclick="calcularPercentual()">
+            <p id="resultadoHistorico"></p>
+        </section>
+        
+        <br>
+        <hr class="separador-formulario">
+        <br>
+
+        <section id="desempenho">
+            <h3 class="subtitulo">Desempenho como Mandante ou Visitante</h3>
+            <form id="desempenhoForm">
+                <table>
+                    <tr>
+                        <td><label for="totalJogosMandantes">Total de jogos conferidos do <strong>Mandante</strong>:</label>
+                        <td><select id="totalJogosMandantes" name="totalJogosMandantes" autocomplete="off">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select></td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Jogos onde o mandante sofreu gols <strong>em casa</strong>:</td>
+                        <td><input type="number" id="jogosMandanteSofreu" name="jogosMandanteSofreu" min="0" max="20" step="1" placeholder="Selecione o valor" autocomplete="off"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="totalJogosVisitantes">Total de jogos conferidos do <strong>Visitante</strong>:</label>
+                        <td><select id="totalJogosVisitantes" name="totalJogosVisitantes" autocomplete="off">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select></td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Jogos onde o visitante marcou gols <strong>fora de casa</strong>:</td>
+                        <td><input type="number" id="jogosVisitanteMarcou" name="jogosVisitanteMarcou" min="0" max="20" step="1" placeholder="Selecione o valor" autocomplete="off"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+            
+            <input type="button" value="Calcular Desempenho" onclick="calcularDesempenho()">   
+            <p id="resultadoDesempenho"></p>
+        </section>
+        
+        <br>
+        <hr class="separador-formulario">
+        <br>
+
+        <section id="infoAdicional">
+            <h3 class="subtitulo">Informações Adicionais</h3>
+            <form id="infoAdicionalForm">
+                <p class="InfAd">O time favorito joga fora?</p>
+                    <input type="radio" id="sim" name="timeFavoritoFora" value="sim" autocomplete="off">
+                        <label class="InfAd" for="sim">Sim</label><br>
+                    <input type="radio" id="nao" name="timeFavoritoFora" value="nao" autocomplete="off">
+                        <label class="InfAd" for="nao">Não</label><br>
+            </form>
+        </section>
+        
+<!--Acrescentar depois 
+        <hr class="separador-formulario">
+
+        <br><h3 class="subtitulo">Avaliação do Jogo em Live</h3>
+        <form id="avaliacaoJogoForm">
+            <p>(Live) Boas chances de gols e pressão de ambos os times?</p>
+                <input type="checkbox" id="chancesGols" name="chancesGols">
+                    <label for="chancesGols">Sim</label><br>
+
+            <p>(Live) A situação do confronto está favorável para um ambas?</p>
+                <input type="checkbox" id="situacaoFavoravel" name="situacaoFavoravel">
+                    <label for="situacaoFavoravel">Sim</label><br>
+
+            <p>(Live) Time favorito perdendo até os 50'?</p>
+                <input type="checkbox" id="timeFavoritoPerdendo" name="timeFavoritoPerdendo">
+                    <label for="timeFavoritoPerdendo">Sim</label><br>
+        </form>
+--> 
+        <br>
+        <hr class="separador-formulario">
+        <br>
+
+        <input type="button" value="Calcular Resultado Final" onclick="calcularResultado()">
+        <p id="resultadoFinal"></p>
+
+        <br>        
+        <button type="button" id="botaoLimpar">Limpar</button>
+
+        
+<!--Acrescentar depois 
+        <br>
+        <hr class="separador-formulario">
+        <br>
+
+        <br>
+        <h3 class="subtitulo">Feedback</h3>
+
+        <form id="feedbackForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira seu nome">
+        
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Insira seu e-mail">
+        
+            <label for="feedbackTexto">Texto do Feedback:</label>
+            <textarea id="feedbackTexto" name="feedbackTexto" placeholder="Insira seu feedback"></textarea>
+        
+            <button type="submit">Enviar Feedback</button>
+        </form>
+        <div id="comentariosFeedback"></div>
+-->        
+
+        
+
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p>Fuht Stats é um produto da</p>
+            <a href="https://www.instagram.com/vincc1tic" target="_blank">
+                <img src="img_logo/logo_vincc1.png" alt="Logo Vincc1" class="footer-logo">
+            </a>    
+        </div>
+        <div class="footer-right">
+            <p>Nos acompanhe no Instagram:</p>  
+            <a href="https://www.instagram.com/fuhtstats" target="_blank" class="instagram-link">
+                <img src="img/instagram.png" alt="@fuhtstats" class="instagram-icon">
+                <span><strong>@fuhtstats</strong></span>
+            </a>
+        </div>
+        
+    </footer>
+    
+    
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+
